@@ -1,0 +1,23 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="org.m4m.effects"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="18"
+8-->/Users/adhamkhwaldeh/Data/Android/Tools/05-MediaEditor/JoinVideosFFmpeg/effects/src/main/AndroidManifest.xml
+9        android:targetSdkVersion="28" />
+9-->/Users/adhamkhwaldeh/Data/Android/Tools/05-MediaEditor/JoinVideosFFmpeg/effects/src/main/AndroidManifest.xml
+10
+11    <uses-feature
+11-->/Users/adhamkhwaldeh/Data/Android/Tools/05-MediaEditor/JoinVideosFFmpeg/effects/src/main/AndroidManifest.xml:8:5-10:38
+12        android:glEsVersion="0x00020000"
+12-->/Users/adhamkhwaldeh/Data/Android/Tools/05-MediaEditor/JoinVideosFFmpeg/effects/src/main/AndroidManifest.xml:9:13-45
+13        android:required="true" />
+13-->/Users/adhamkhwaldeh/Data/Android/Tools/05-MediaEditor/JoinVideosFFmpeg/effects/src/main/AndroidManifest.xml:10:13-36
+14
+15    <application />
+15-->/Users/adhamkhwaldeh/Data/Android/Tools/05-MediaEditor/JoinVideosFFmpeg/effects/src/main/AndroidManifest.xml:12:5-32
+16
+17</manifest>

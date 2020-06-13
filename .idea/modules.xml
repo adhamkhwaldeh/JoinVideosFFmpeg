@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/JoinVideosFFmpeg.iml" filepath="$PROJECT_DIR$/.idea/modules/JoinVideosFFmpeg.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/My_Application.iml" filepath="$PROJECT_DIR$/.idea/modules/My_Application.iml" group="My_Application" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/android/android.iml" filepath="$PROJECT_DIR$/.idea/modules/android/android.iml" group="My Application/android" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/app.iml" group="My Application/app" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/domain/domain.iml" filepath="$PROJECT_DIR$/.idea/modules/domain/domain.iml" group="My Application/domain" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/effects/effects.iml" filepath="$PROJECT_DIR$/.idea/modules/effects/effects.iml" group="My Application/effects" />
     </modules>
   </component>
 </project>

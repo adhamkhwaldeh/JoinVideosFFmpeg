@@ -1,0 +1,24 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="org.m4m.android"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="18"
+8-->/Users/adhamkhwaldeh/Data/Android/Tools/05-MediaEditor/JoinVideosFFmpeg/android/src/main/AndroidManifest.xml
+9        android:targetSdkVersion="28" />
+9-->/Users/adhamkhwaldeh/Data/Android/Tools/05-MediaEditor/JoinVideosFFmpeg/android/src/main/AndroidManifest.xml
+10
+11    <!-- Require OpenGL ES >= 2.0. -->
+12    <uses-feature
+12-->/Users/adhamkhwaldeh/Data/Android/Tools/05-MediaEditor/JoinVideosFFmpeg/android/src/main/AndroidManifest.xml:8:5-10:34
+13        android:glEsVersion="0x00020000"
+13-->/Users/adhamkhwaldeh/Data/Android/Tools/05-MediaEditor/JoinVideosFFmpeg/android/src/main/AndroidManifest.xml:9:9-41
+14        android:required="true" />
+14-->/Users/adhamkhwaldeh/Data/Android/Tools/05-MediaEditor/JoinVideosFFmpeg/android/src/main/AndroidManifest.xml:10:9-32
+15
+16    <application />
+16-->/Users/adhamkhwaldeh/Data/Android/Tools/05-MediaEditor/JoinVideosFFmpeg/android/src/main/AndroidManifest.xml:12:5-32
+17
+18</manifest>
