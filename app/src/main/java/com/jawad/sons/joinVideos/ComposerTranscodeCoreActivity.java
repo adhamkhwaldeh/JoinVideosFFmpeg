@@ -34,8 +34,6 @@ import android.widget.ProgressBar;
 import android.widget.Spinner;
 import android.widget.TextView;
 
-import androidx.core.content.FileProvider;
-
 import com.jawad.sons.joinVideos.controls.TranscodeSurfaceView;
 
 import org.m4m.android.AndroidMediaObjectFactory;
@@ -43,7 +41,6 @@ import org.m4m.android.AudioFormatAndroid;
 import org.m4m.android.VideoFormatAndroid;
 import org.m4m.domain.ISurfaceWrapper;
 
-import java.io.File;
 import java.io.IOException;
 import java.nio.ByteBuffer;
 import java.util.concurrent.TimeUnit;
@@ -479,13 +476,11 @@ public class ComposerTranscodeCoreActivity extends ActivityWithTimeline implemen
 
     private void playResult() {
 
-//        String videoUrl = "content:///" + dstMediaPath;
+        String videoUrl = "file:///" + dstMediaPath;
 
-        Intent intent = new Intent(android.content.Intent.ACTION_VIEW);
+        Intent intent = new Intent(Intent.ACTION_VIEW);
 
-        Uri data = FileProvider.getUriForFile(this,
-                BuildConfig.APPLICATION_ID + ".provider", new File(dstMediaPath));
-//        Uri data = Uri.parse(videoUrl);
+        Uri data = Uri.parse(videoUrl);
         intent.setDataAndType(data, "video/mp4");
         startActivity(intent);
     }

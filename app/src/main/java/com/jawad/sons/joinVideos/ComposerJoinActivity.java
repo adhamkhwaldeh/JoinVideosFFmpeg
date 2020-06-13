@@ -22,10 +22,8 @@ import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 
-
 import com.jawad.sons.joinVideos.controls.TimelineItem;
 
-import java.io.File;
 
 public class ComposerJoinActivity extends ActivityWithTimeline implements View.OnClickListener {
     TimelineItem item1 = null;
@@ -75,14 +73,7 @@ public class ComposerJoinActivity extends ActivityWithTimeline implements View.O
         intent.putExtras(bundle);
         bundle.putString("srcMediaName2", item2.getMediaFileName());
         intent.putExtras(bundle);
-        String substring = item1.getMediaFileName().substring(0, item1.getMediaFileName().lastIndexOf('.')) + ".mp4";
-
-        File file = new File(FileHelper.outputPath(this) + "joined");
-        if (!file.exists())
-            file.mkdir();
-
-        bundle.putString("dstMediaPath", FileHelper.outputPath(this) + "joined/" + substring);
-//    item1.genDstPath(item1.getMediaFileName(), "joined"));
+        bundle.putString("dstMediaPath", item1.genDstPath(item1.getMediaFileName(), "joined"));
         intent.putExtras(bundle);
         bundle.putString("srcUri1", item1.getUri().getString());
         intent.putExtras(bundle);

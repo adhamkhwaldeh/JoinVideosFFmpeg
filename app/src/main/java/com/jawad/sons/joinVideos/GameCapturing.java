@@ -265,13 +265,13 @@ public class GameCapturing extends Activity implements GameCaptureSettingsPopup.
     }
 
     protected void playVideo() {
-//        String videoUrl = "content:///" + videoPath + lastFileName;
+        String videoUrl = "content:///" + videoPath + lastFileName;
 
         Intent intent = new Intent(android.content.Intent.ACTION_VIEW);
-        Uri data = FileProvider.getUriForFile(this,
-                BuildConfig.APPLICATION_ID + ".provider", new File(videoPath + lastFileName));
-//        Uri data = Uri.parse(videoUrl);
-        intent.setDataAndType(data, "video/mp4");
+//        Uri data = FileProvider.getUriForFile(this,
+//                BuildConfig.APPLICATION_ID + ".provider", new File(videoPath + lastFileName));
+        Uri data = Uri.parse(videoUrl);
+        intent.setDataAndType(data, "video/*");
         startActivity(intent);
     }
 

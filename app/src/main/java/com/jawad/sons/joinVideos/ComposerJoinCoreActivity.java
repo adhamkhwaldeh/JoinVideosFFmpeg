@@ -18,11 +18,11 @@ package com.jawad.sons.joinVideos;
 
 import android.os.Bundle;
 import android.widget.TextView;
-
 import org.m4m.MediaComposer;
 import org.m4m.MediaFileInfo;
-import org.m4m.Uri;
 import org.m4m.android.AndroidMediaObjectFactory;
+
+import org.m4m.Uri;
 
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
