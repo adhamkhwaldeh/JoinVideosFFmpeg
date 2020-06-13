@@ -1,22 +1,13 @@
-buildscript {
-    repositories {
-        jcenter()
-    }
-    dependencies {
-        classpath 'com.github.dcendents:android-maven-gradle-plugin:1.5'
-    }
-}
-
 apply plugin: 'com.android.library'
-apply plugin: 'com.github.dcendents.android-maven'
+//apply plugin: 'com.github.dcendents.android-maven'
 
 android {
-    compileSdkVersion 28
-    buildToolsVersion "28.0.3"
+    compileSdkVersion COMPILE_VERSION
+    buildToolsVersion BUILD_VERSION
 
     defaultConfig {
-        minSdkVersion 18
-        targetSdkVersion 28
+        minSdkVersion MIN_VERSION
+        targetSdkVersion COMPILE_VERSION
         versionCode 1
         versionName "1.0"
     }
@@ -30,8 +21,7 @@ android {
 }
 
 dependencies {
-    compile project(':domain')
-    testCompile 'junit:junit:4.12'
+    implementation project(':domain')
 }
 
 version = android.defaultConfig.versionName

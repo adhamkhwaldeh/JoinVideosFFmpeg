@@ -2,12 +2,12 @@ apply plugin: 'com.android.library'
 //apply plugin: 'com.github.dcendents.android-maven'
 
 android {
-    compileSdkVersion 28
-    buildToolsVersion "28.0.3"
+    compileSdkVersion COMPILE_VERSION
+    buildToolsVersion BUILD_VERSION
 
     defaultConfig {
-        minSdkVersion 18
-        targetSdkVersion 28
+        minSdkVersion MIN_VERSION
+        targetSdkVersion COMPILE_VERSION
         versionCode 1
         versionName "1.0"
     }
@@ -20,8 +20,8 @@ android {
 }
 
 dependencies {
-    compile project(':domain')
-    compile project(':android')
+    implementation project(':domain')
+    implementation project(':android')
 }
 
 group = "org.m4m"
