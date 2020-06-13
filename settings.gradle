@@ -1,5 +1,6 @@
+include ':dexter'
 include ':effects'
 include ':android'
 include ':domain'
 include ':app'
-rootProject.name = "My Application"
+rootProject.name = "Join Videos"

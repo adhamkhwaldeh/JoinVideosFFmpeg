@@ -1,0 +1,30 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion COMPILE_VERSION
+    buildToolsVersion BUILD_VERSION
+
+    defaultConfig {
+        minSdkVersion MIN_VERSION
+        targetSdkVersion COMPILE_VERSION
+        versionCode 1
+        versionName "1.0"
+//        consumerProguardFiles 'proguard-rules.pro'
+//        testInstrumentationRunner "android.test.InstrumentationTestRunner"
+    }
+//    buildTypes {
+//        debug {
+//            minifyEnabled false
+//        }
+//        release {
+//            minifyEnabled true
+//            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+//        }
+//    }
+}
+
+dependencies {
+    implementation "androidx.appcompat:appcompat:$ANDROID_SUPPORT"
+    implementation "com.google.android.material:material:$ANDROID_MATERIAL_SUPPORT"
+
+}
