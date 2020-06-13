@@ -1,6 +1,7 @@
 package com.jawad.sons.joinVideos;
 
 import android.content.Context;
+import android.util.Log;
 
 import java.io.File;
 
@@ -13,8 +14,8 @@ public class FileHelper {
         if (!folder.exists())
             folder.mkdirs();
 
-//        if (folder.exists())
-//            Log.v("", "");
+        if (folder.exists())
+            Log.v("", "");
 
         return path;
     }

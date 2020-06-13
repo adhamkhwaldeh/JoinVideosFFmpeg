@@ -36,6 +36,8 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.core.content.FileProvider;
+
 import com.jawad.sons.joinVideos.controls.GameCaptureSettingsPopup;
 import com.jawad.sons.joinVideos.controls.GameGLSurfaceView;
 
@@ -192,8 +194,8 @@ public class GameCapturing extends Activity implements GameCaptureSettingsPopup.
 
     protected void updateUI() {
 
-        ImageButton settingsButton = (ImageButton)findViewById(R.id.settings);
-        ImageButton previewButton = (ImageButton)findViewById(R.id.preview);
+        ImageButton settingsButton = (ImageButton) findViewById(R.id.settings);
+        ImageButton previewButton = (ImageButton) findViewById(R.id.preview);
 
         if (gameRenderer.isCapturingStarted() == false) {
             captureButton.setImageResource(R.drawable.rec_inact);
@@ -252,9 +254,9 @@ public class GameCapturing extends Activity implements GameCaptureSettingsPopup.
 
         thumb = ThumbnailUtils.createVideoThumbnail(videoPath + lastFileName, MediaStore.Video.Thumbnails.MINI_KIND);
 
-        ImageButton preview = (ImageButton)findViewById(R.id.preview);
+        ImageButton preview = (ImageButton) findViewById(R.id.preview);
 
-        if(thumb == null) {
+        if (thumb == null) {
             preview.setVisibility(View.INVISIBLE);
         } else {
             preview.setVisibility(View.VISIBLE);
@@ -263,11 +265,12 @@ public class GameCapturing extends Activity implements GameCaptureSettingsPopup.
     }
 
     protected void playVideo() {
-        String videoUrl = "content:///" + videoPath + lastFileName;
+//        String videoUrl = "content:///" + videoPath + lastFileName;
 
         Intent intent = new Intent(android.content.Intent.ACTION_VIEW);
-
-        Uri data = Uri.parse(videoUrl);
+        Uri data = FileProvider.getUriForFile(this,
+                BuildConfig.APPLICATION_ID + ".provider", new File(videoPath + lastFileName));
+//        Uri data = Uri.parse(videoUrl);
         intent.setDataAndType(data, "video/mp4");
         startActivity(intent);
     }

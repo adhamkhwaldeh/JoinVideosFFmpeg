@@ -479,12 +479,13 @@ public class ComposerTranscodeCoreActivity extends ActivityWithTimeline implemen
 
     private void playResult() {
 
-//        String videoUrl =  "content:///" + dstMediaPath;
+//        String videoUrl = "content:///" + dstMediaPath;
 
         Intent intent = new Intent(android.content.Intent.ACTION_VIEW);
 
         Uri data = FileProvider.getUriForFile(this,
-                BuildConfig.APPLICATION_ID + ".provider", new File(dstMediaPath));//Uri.parse(videoUrl);
+                BuildConfig.APPLICATION_ID + ".provider", new File(dstMediaPath));
+//        Uri data = Uri.parse(videoUrl);
         intent.setDataAndType(data, "video/mp4");
         startActivity(intent);
     }
